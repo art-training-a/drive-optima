@@ -21,6 +21,9 @@ def calculate_single_vehicle_tco(
     pct_highway: float,
     years: int,
 ) -> Dict:
+     """
+    Function that is calculating TCO per single vehicle.
+    """
     # 1. Średnie ważone spalanie / zużycie energii
     weighted_consumption = (
         (pct_city / 100.0) * vehicle.cons_city
@@ -66,6 +69,9 @@ def rank_vehicles(
     fuel_prices_map: Dict[str, FuelPrice],
     request: CalculationRequest,
 ) -> List[Dict]:
+    """
+    Function that is ranking vehicles.
+    """
     annual_km = MILEAGE_MAP[request.mileage_bracket]
     results = []
 
